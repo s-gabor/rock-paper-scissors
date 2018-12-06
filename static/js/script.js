@@ -42,7 +42,7 @@ function play(userChoice) {
   var winner = getWinner(computerChoice, userChoice);
 
   // Display results
-  document.querySelector('.computer').innerHTML = 'Computer\'s choice: <strong>' + computerChoice + '</strong>';
-  document.querySelector('.user').innerHTML = 'User\'s choice: <strong>' + userChoice + '</strong>';
-  document.querySelector('.result').textContent = winner + ' wins!';
+  document.querySelector('.user-box').innerHTML = 'User\'s choice: <strong>' + userChoice + '</strong>';
+  document.querySelector('.computer-box').innerHTML = 'Computer\'s choice: <strong>' + computerChoice + '</strong>';
+  document.querySelector('.result-box').textContent = winner + ' wins!';
 }
