@@ -49,8 +49,15 @@ function play(userChoice) {
   var winner = getWinner(computerChoice, userChoice);
 
   // Update score
-  if (winner === 'User') { score++; } 
-  if (winner === 'Computer') { score--; }
+  if (winner === 'User') {
+    score++;
+    document.getElementById('message').style.color = 'green';
+  } else if (winner === 'Computer') {
+    score--;
+    document.getElementById('message').style.color = 'red';
+  } else {
+    document.getElementById('message').style.color = 'grey';
+  }
 
   // Display results
   document.getElementById('user').textContent = userChoice;
