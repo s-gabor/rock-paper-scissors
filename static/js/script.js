@@ -45,4 +45,5 @@ function play(userChoice) {
   document.querySelector('.user-box').innerHTML = 'User\'s choice: <strong>' + userChoice + '</strong>';
   document.querySelector('.computer-box').innerHTML = 'Computer\'s choice: <strong>' + computerChoice + '</strong>';
   document.querySelector('.result-box').textContent = winner + ' wins!';
+  document.querySelector('.message').textContent = 'Nice!';
 }
