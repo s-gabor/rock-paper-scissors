@@ -1,16 +1,20 @@
+var score = 0;
+var round = 0;
+
+
+// Get user input
 document.getElementById('rock').addEventListener('click', function() {
   play('rock');
 });
-
 document.getElementById('paper').addEventListener('click', function() {
   play('paper');
 });
-
 document.getElementById('scissors').addEventListener('click', function() {
   play('scissors');
 });
 
 
+// Select a random element from an array
 function randomChoice(array) {
   return array[Math.floor(Math.random() * array.length)];
 }
@@ -36,13 +40,22 @@ function getWinner(computerChoice, userChoice) {
 
 
 function play(userChoice) {
+  // Update round
+  round++
+
   // Determine the winner
   var possibilities = ["rock", "paper", "scissors"];
   var computerChoice = randomChoice(possibilities);
   var winner = getWinner(computerChoice, userChoice);
 
+  // Update score
+  if (winner === 'User') { score++; } 
+  if (winner === 'Computer') { score--; }
+
   // Display results
-  document.querySelector('.user').innerHTML = 'User\'s choice: <strong>' + userChoice + '</strong>';
-  document.querySelector('.computer').innerHTML = 'Computer\'s choice: <strong>' + computerChoice + '</strong>';
-  document.querySelector('.result').textContent = winner + ' wins!';
+  document.getElementById('user').textContent = userChoice;
+  document.getElementById('score').textContent = score;
+  document.getElementById('computer').textContent = computerChoice;
+  document.getElementById('round').textContent = 'Round: ' + round;
+  document.getElementById('message').textContent = winner + ' wins!';
 }
