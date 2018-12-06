@@ -1,0 +1,21 @@
+h1, h3 {
+	text-align: center;
+}
+
+
+.imags {
+	background-color: lightgrey;
+	border: solid black;
+	margin-left: auto;
+	margin-right: auto;
+	width: 536px;
+	padding: 15px;
+}
+
+
+img {
+	width: 150px;
+	height: 200px;
+	margin: 10px;
+	border: solid black;
+}

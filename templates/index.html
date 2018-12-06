@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<title>Rock, Paper, Scissors</title>
+		<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/styles.css')}}">
+	</head>
+
+	<body>
+		<h1>Rock, Paper, Scissors</h1>
+		<div class="imags">
+			<h3>CHOOSE ONE:</h3>
+    		<img id="rock" src="{{url_for('static', filename='images/rock.jpg')}}"/>
+    		<img id="paper" src="{{url_for('static', filename='images/paper.jpg')}}"/>
+    		<img id="scissors" src="{{url_for('static', filename='images/scissors.jpg')}}"/>
+    		<hr>  
+    		<div class="user"></div>  		
+    		<div class="computer"></div>    		
+    		<h3 class="result"></h3>
+		</div>
+		<script src="{{url_for('static', filename='js/script.js')}}"></script>
+	</body>
+	
+</html>
